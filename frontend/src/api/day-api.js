@@ -1,6 +1,5 @@
 import axios from "axios"
-const BASE_URL = "https://enough-prot-mqpxl2qhw-coralietesta.vercel.app/api/day"
-
+const BASE_URL = "https://enough-prot-backend.vercel.app/api/day"
 
 export class DayAPI{
     static async create(token, day) {
