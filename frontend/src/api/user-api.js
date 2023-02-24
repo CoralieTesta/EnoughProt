@@ -1,5 +1,5 @@
 import axios from "axios"
-const BASE_URL = "http://localhost:3000/api/auth/"
+const BASE_URL = "https://enough-prot-mqpxl2qhw-coralietesta.vercel.app/api/auth/"
 
 
 export class UserAPI{
