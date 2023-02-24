@@ -4,6 +4,10 @@ const User = require('../models/User')
 
 const jwt = require('jsonwebtoken');
 
+exports.yo = (req, res, next) => {
+    res.status(201).json({message: 'Yo !'})
+}
+
 exports.signup = (req, res, next) => {
     bcrypt.hash(req.body.password, 10)
       .then(hash => {
