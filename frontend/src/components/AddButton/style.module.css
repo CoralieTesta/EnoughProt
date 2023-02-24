@@ -1,0 +1,27 @@
+.addContainer {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.button {
+    height: 50px;
+    width: 140px;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    margin-right: 15px;
+    background-color: rgb(220, 206, 232);
+    font-style: italic;
+    font-weight: 550;
+    display: flex;
+}
+
+.button:hover {
+    color: white;
+    background-color: rgb(123, 68, 171);
+}
+
+.plusIcon {
+    margin-top: 12px;
+}

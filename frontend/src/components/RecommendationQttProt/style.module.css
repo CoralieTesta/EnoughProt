@@ -1,0 +1,9 @@
+.container {
+    margin: 30px;
+    font-size: 22px;
+}
+
+.qttProt {
+    color: green;
+    font-weight: bold
+}

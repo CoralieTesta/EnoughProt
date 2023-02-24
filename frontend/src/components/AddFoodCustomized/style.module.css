@@ -1,0 +1,11 @@
+.container {
+    margin: auto;
+    margin-top: 40px;
+}
+
+.title {
+    margin-left: 30px;
+    color: white;
+    background-color: indigo;
+    padding: 5px;
+}
