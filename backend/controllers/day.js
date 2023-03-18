@@ -1,6 +1,7 @@
 const Day = require('../models/Day')
 
 exports.create = (req, res, next) => {
+    const yo =0
     delete req.body._id
     Day.findOne({email: req.body.email, date: req.body.date})
     .then( function(err, foundDay) {
