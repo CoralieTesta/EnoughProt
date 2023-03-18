@@ -1,9 +1,9 @@
-const { param } = require('../app')
 const Day = require('../models/Day')
 
 exports.create = (req, res, next) => {
     delete req.body._id
-    Day.findOne({email: req.body.email, date: req.body.date}, function(err, foundDay) {
+    Day.findOne({email: req.body.email, date: req.body.date})
+    .then( function(err, foundDay) {
         if(!foundDay) {
             const day = new Day({
                 ...req.body
@@ -24,6 +24,21 @@ exports.getADay = (req, res, next) => {
     Day.findOne({email: req.params.email, date: date}).orFail()
     .then(day => res.status(200).json(day))
     .catch(error => res.status(400).json({error}))
+}
+
+exports.getADayNotInDB= (req, res, next) => {
+    const date = req.params.day + "/"+req.params.month +"/"+req.params.year
+    const day =Day.findOne({email: req.params.email, date: date})
+    .then(function(day) {
+        if(day){
+            return res.status(400).json({message : "this day already exists", day})
+        }
+        else {
+            return res.status(200).json({message : "this day doesn't exist",error})
+        }
+    }
+    )
+    .catch(function(error) {return res.status(200).json({message : "this day doesn't exist",error})})
 }
 
 exports.getAll = (req, res, next) => {
