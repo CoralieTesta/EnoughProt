@@ -1,6 +1,5 @@
 import axios from "axios"
-const BASE_URL = "http://localhost:3000/api/day"
-//"https://enoughprot.onrender.com/api/day"
+const BASE_URL = "https://enoughprot.onrender.com/api/day" //"http://localhost:3000/api/day"
 
 export class DayAPI{
     static async create(token, day) {

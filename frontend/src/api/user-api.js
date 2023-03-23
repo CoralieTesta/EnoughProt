@@ -1,11 +1,11 @@
 import axios from "axios"
-const BASE_URL = "http://localhost:3000/api/auth/"//"https://enoughprot.onrender.com/api/auth/"
+const BASE_URL = "https://enoughprot.onrender.com/api/auth"//"http://localhost:3000/api/auth"
 
 
 export class UserAPI{
     static async create(user) {
         return (
-            await axios.post(`${BASE_URL}signup`, user)
+            await axios.post(`${BASE_URL}/signup`, user)
             .catch(function(error) {
                 if (error.response) {
                     console.log("error status",error.response.status);
