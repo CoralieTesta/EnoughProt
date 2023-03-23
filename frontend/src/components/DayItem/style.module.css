@@ -1,0 +1,50 @@
+.container {
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    padding-bottom: 5px;
+    box-shadow: 8px 7px 7px rgb(126, 117, 132);
+    margin-bottom: 20px;
+}
+
+.titleContainer {
+    text-align: center;
+    border-bottom: 2px solid rgb(184, 184, 163);
+    height: 60px;
+    display: flex;
+}
+
+.title {
+    margin: auto;
+    vertical-align: baseline;
+}
+
+
+.th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #b6bbc9;
+    font-size: 20px;
+}
+
+.total {
+    margin: 15px;
+    text-align: center;
+    font-weight: 700;
+    background-color: #021443;
+    color: aliceblue;
+    padding: 8px;
+    font-size: 20px;
+}
+
+.deleteBtn {
+    width: 50px;
+    padding-top: 15px;
+}
+
+.trashIcon:hover {
+    color:rgb(234, 27, 27);
+}

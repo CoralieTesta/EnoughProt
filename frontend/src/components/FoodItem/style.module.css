@@ -1,0 +1,38 @@
+.tr {
+    margin: auto;
+}
+
+.tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tr:nth-child(odd) {
+    background-color: #edecec;
+}
+
+.tr:hover {
+    background-color: #ddd;
+}
+
+.td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.miniContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.qttProt {
+    width: 100%;
+}
+
+.trashIcon {
+    color: rgb(4, 4, 88);
+    cursor: pointer;
+}
+
+.trashIcon:hover {
+    color: red;
+}

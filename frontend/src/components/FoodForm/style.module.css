@@ -1,0 +1,28 @@
+.container {
+    border: 2px solid Indigo;
+    padding: 7px;
+    text-align: center;
+    width: 80%;
+    max-width: 550px;
+    margin: auto;
+}
+
+.el {
+    margin: 8px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.btn {
+    width: 90%;
+    height: 100%;
+    font-size: large;
+    background-color: rgb(213, 213, 233);
+    border-color: rgb(197, 197, 231);
+    cursor: pointer;
+    margin-top: 15px;
+}
+.btn:hover {
+    background-color: rgb(97, 97, 228);
+    color: white;
+}

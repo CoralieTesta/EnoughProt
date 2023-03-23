@@ -1,0 +1,18 @@
+.buttons {
+    width: 90%;
+    margin: auto;
+    height:30px;
+    margin-bottom: 30px;
+}
+
+.button {
+    width: 50%;
+    height:100%;
+    border-color: indigo;
+    font-size: large;
+    cursor: pointer;
+}
+
+.title {
+    text-align: center;
+}

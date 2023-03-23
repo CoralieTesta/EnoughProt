@@ -1,0 +1,21 @@
+.container {
+    margin: 20px;
+    font-size: 20px;
+}
+
+.input {
+    width: 30px;
+    margin-right: 2px;
+    font-weight: 20px;
+}
+
+.btn {
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.results {
+    margin-top: 20px;
+    background-color: rgb(243, 232, 250);
+    padding: 5px;
+}

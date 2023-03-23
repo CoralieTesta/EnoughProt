@@ -1,0 +1,42 @@
+.upperContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.helloContainer {
+    margin: 20px 15px 0 0;
+    color: blue;
+    font-style: italic;
+    
+}
+
+.hello {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.logout{
+    margin-top: 6px;
+    color: black;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+}
+
+.logout:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.logoutIcon {
+    margin-top: 3px;
+    margin-left: 6px;
+}
+
+@media screen and (max-width: 600px) {
+    .helloContainer {
+        width: 150px;
+    }
+}

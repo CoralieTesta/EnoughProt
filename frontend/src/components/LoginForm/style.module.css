@@ -1,0 +1,57 @@
+
+.el {
+    height: 30px;
+    text-align: center;
+    margin-top: 20px;  
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.label {
+    font-size: 20px;
+}
+
+.btn {
+    min-width: 300px;
+    width: 50%;
+    height: 100%;
+    font-size: large;
+    background-color: rgb(213, 213, 233);
+    border-color: rgb(197, 197, 231);
+    cursor: pointer;
+    margin-top: 55px;
+    border-radius: 5px;
+}
+.btn:hover {
+    background-color: rgb(97, 97, 228);
+    color: white;
+}
+
+.pwAdvise{
+    margin-top: 8px;
+    margin-bottom: 18px;
+}
+
+.pwContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.inputPwContainer {
+    display: flex;
+    padding-top: 5px; 
+}
+.inputPw {
+    height:17px;
+    border: solid black 1px;
+    border-right: none;
+    margin-left: 5px;
+}
+
+.eyeIcon {
+    background-color:  #e8f0fe;
+    height: 15px;
+    border: solid black 1px;
+    padding: 0 2px 4px 2px;
+    cursor: pointer;
+}
