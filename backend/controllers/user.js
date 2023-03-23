@@ -6,27 +6,19 @@ const jwt = require('jsonwebtoken');
 
 
 exports.signup = (req, res, next) => {
-    User.findOne({'email': req.body.email})
-    .then( function(err, foundUser) {
-        if(!foundUser){
-            bcrypt.hash(req.body.password, 10)
-            .then(hash => {
-                const user = new User({
-                email: req.body.email,
-                password: hash
-                });
-                console.log("user",user)
-                user.save()
-                .then(() => res.status(201).json({ message: 'Utilisateur créé !' }))
-                .catch(error => res.status(400).json({ error }));
-            })
-        }
-        else {
-            console.log("this user already exists",foundUser)
-        }
-    })
+    bcrypt.hash(req.body.password, 10)
+      .then(hash => {
+        const user = new User({
+          email: req.body.email,
+          password: hash,
+          bookingArray: []
+        });
+        user.save()
+          .then(() => res.status(201).json({ message: 'Utilisateur créé !' }))
+          .catch(error => res.status(400).json({ error }));
+      })
+      .catch(error => res.status(500).json({ error }));
   };
-
 
 exports.login = (req, res, next) => {
     User.findOne({ email: req.body.email })
