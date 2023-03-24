@@ -20,6 +20,7 @@
     border-color: rgb(197, 197, 231);
     cursor: pointer;
     margin-top: 55px;
+    margin-bottom: 50px;
     border-radius: 5px;
 }
 .btn:hover {
