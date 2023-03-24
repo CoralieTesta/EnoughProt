@@ -12,7 +12,7 @@ export function LoginForm({onConnectUser, connectMode}) {
     function submitHandler(e) {
         userCtx.setQttProtPerDay(null)
         e.preventDefault()
-        const enteredEmail = emailInputRef.current.value
+        const enteredEmail = emailInputRef.current.value.toLowerCase()
         const enteredPassword = passwordInputRef.current.value
         const user = {
             email: enteredEmail,
