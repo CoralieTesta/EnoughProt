@@ -37,12 +37,39 @@ export function FoodResults({quantityProtein, quantity, food}) {
         navigate("/day/"+date)
     }
 
+    async function addFoodNut() {
+        const foodObject = {name:'nuts', quantity:'100g', quantityProtein:17.3}
+        await DayAPI.addFood(userCtx.token, foodObject, 
+        {
+            email:userCtx.email,
+            date: date
+        })
+        navigate("/day/"+date)
+    }
+
     return(
         <div className={s.container}>
             <h2 className={s.title}>Résultat : </h2>
+            {console.log(quantity, food, quantityProtein)}
+            {quantity.trim()==="" && food.trim()==="" &&
+                `100g (de) nuts contient 17.3 g de protéines.`
+            }
             {quantity && food && quantityProtein &&
                 `${quantity} (de) ${food} contient ${quantityProtein} g de protéines.`
             }    
+
+            {quantity.trim()==="" && food.trim()==="" &&
+                <div>
+                    {userCtx.email && dayCtx.isTodayInArray() &&
+                        <button 
+                            className={s.button}
+                            onClick={addFoodNut}
+                        >
+                                Ajouter à Aujourd'hui
+                        </button>
+                    }
+                </div>
+            }
             {quantity && food && quantityProtein &&
                 <div>
                     {userCtx.email && dayCtx.isTodayInArray() &&

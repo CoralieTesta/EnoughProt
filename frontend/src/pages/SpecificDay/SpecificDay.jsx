@@ -10,7 +10,6 @@ import DayContext from "../../store/day-context";
 
 export function SpecificDay() {
     const [foodItemDeleted,setFoodItemDeleted] =useState("")//id de l'aliment supprimé pour recharger la page
-    const [dayCreated,setDayCreated]=useState("")
     const {day_date,month_date,year_date} = useParams();
     var date=day_date+'/'+month_date+'/'+year_date
     const current_today = new Date();
@@ -58,7 +57,8 @@ export function SpecificDay() {
         
         console.log("reponse", response)
         if(response) {
-            setDayCreated(data.email)
+            setDay(response)
+            //window.location.reload(false);
             getAll(userCtx.token, userCtx.email)
         }
         else {
@@ -67,11 +67,13 @@ export function SpecificDay() {
     }
 
     useEffect(() => {
+        console.log("isTodayInArray", dayCtx.isTodayInArray())
         if(! dayCtx.isTodayInArray()) {
             addDayHandler()
         }
         getADay(userCtx.token, userCtx.email, date)
-    },[userCtx.email, userCtx.token, date,foodItemDeleted,dayCreated])
+        setTimeout(function navig(){navigate("/day/"+date)}, 2*1000)
+    },[userCtx.email, userCtx.token, date,foodItemDeleted])
 
     async function getAll(token,email) {
         const days =await DayAPI.getAll(token, email)

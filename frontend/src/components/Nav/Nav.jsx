@@ -7,22 +7,18 @@ export function Nav() {
     const navigate = useNavigate()
     return(
         <nav className={s.nav}>
-        <button onClick={() => navigate("/")} className={s.button}>
-        Home
-        </button>
-        <button onClick={() => navigate("/dailySummary")} className={s.button}>
-            Mon résumé journalier
-        </button>
-        <button onClick={() => navigate("/day/"+date)} className={s.button}>
-            Aujourd'hui
-        </button>
-        <button onClick={() => navigate("/food")} className={s.button}>
-            Informations nutritionnelles
-        </button>
-        <button onClick={() => navigate("/login")} className={s.button}>
-            Login
-        </button>
-
+            <button onClick={() => navigate("/")} className={s.button}>
+            Home
+            </button>
+            <button onClick={() => navigate("/dailySummary")} className={s.button}>
+                Mon résumé journalier
+            </button>
+            <button onClick={() => navigate("/food")} className={s.button}>
+                Informations nutritionnelles
+            </button>
+            <button onClick={() => navigate("/login")} className={s.button}>
+                Login
+            </button>
         </nav>
     )
 }
